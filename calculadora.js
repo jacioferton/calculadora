@@ -19,14 +19,13 @@ function calcular () {
     imPar(resultado)
     nPrimo(resultado)
 }
-function raiz () {
+function raiz () {}
     var numero = document.getElementById('resultado').innerHTML;
     if (numero) {
         document.getElementById('resultado').innerHTML = Math.sqrt(numero,2)
     }
     imPar(numero)
     nPrimo(numero)
-}
 function fatorial() {
     var numero = document.getElementById('resultado').innerHTML;
     if (numero < 0) 
@@ -46,7 +45,7 @@ function fatorial() {
     nPrimo(numero)
 }
 function imPar(num) {
-    if (num % 2 === 0) {
+    if (eval(num) % 2 === 0) {
         par.style.color = "#000000"
         impar.style.color = "rgba(0, 0, 0, 0.3)"
     } else {
@@ -55,9 +54,10 @@ function imPar(num) {
     }
 }
 function nPrimo(numero) {
+    let numeroINT = eval(numero)
     let pri = true;
-  for(let i = 2; i < numero; i++) {
-    if(numero % i === 0) {
+  for(let i = 2; i < numeroINT; i++) {
+    if(numeroINT % i === 0) {
       pri = false;
       break;
     }
