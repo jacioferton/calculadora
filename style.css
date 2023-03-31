@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+h1 {
+    color: #000000;
+}
+a {
+    color:#ff9100
+}
+
 .fundo {
     background-color: #28587B;
     height: 100vh;
@@ -31,19 +38,25 @@
 .botao:hover {
     background-color: #408DA0;
 }
-
 .titulo {
     color: #ffffff;
 }
 
-h1 {
-    color: #000000;
-}
 #resultado {
-    background-color: #408DA0;
     width: 258px;
     height: 50px;
-    font-size: 20px;
+    font-size: 40px;
     text-align: right;
     margin-left: 2px;
+}
+#im-par-pri {
+    color: rgba(0, 0, 0, 0.3);
+    width: 258px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+#tela {
+    background-color: #408DA0;
 }
