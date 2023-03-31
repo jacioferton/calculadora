@@ -4,10 +4,12 @@ function inserir (num) {
  }
 function limpar () {
     document.getElementById('resultado').innerHTML = '';
+    limparSpan()
 }
 function apagar () {
     var resultado = document.getElementById('resultado').innerHTML;
     resultado = document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1)
+    limparSpan()
 }
 function calcular () {
     var resultado = document.getElementById('resultado').innerHTML;
@@ -23,6 +25,7 @@ function raiz () {
         document.getElementById('resultado').innerHTML = Math.sqrt(numero,2)
     }
     imPar(numero)
+    nPrimo(numero)
 }
 function fatorial() {
     var numero = document.getElementById('resultado').innerHTML;
@@ -39,6 +42,8 @@ function fatorial() {
             document.getElementById('resultado').innerHTML = fat;
         }
     }
+    imPar(numero)
+    nPrimo(numero)
 }
 function imPar(num) {
     if (num % 2 === 0) {
