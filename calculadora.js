@@ -1,8 +1,8 @@
-function inserir (num) {
+export function inserir (num) {
     document.getElementById('resultado').innerHTML += num;
     limparSpan()
  }
-function limpar () {
+export function limpar () {
     document.getElementById('resultado').innerHTML = '';
     limparSpan()
 }
@@ -11,7 +11,7 @@ function apagar () {
     resultado = document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1)
     limparSpan()
 }
-function calcular () {
+export function calcular () {
     var resultado = document.getElementById('resultado').innerHTML;
     if (resultado) {
         document.getElementById('resultado').innerHTML = eval(resultado)
@@ -19,14 +19,14 @@ function calcular () {
     imPar(resultado)
     nPrimo(resultado)
 }
-function raiz () {}
+export function raiz () {}
     var numero = document.getElementById('resultado').innerHTML;
     if (numero) {
         document.getElementById('resultado').innerHTML = Math.sqrt(numero,2)
     }
     imPar(numero)
     nPrimo(numero)
-function fatorial() {
+export function fatorial() {
     var numero = document.getElementById('resultado').innerHTML;
     if (numero < 0) 
     document.getElementById('resultado').innerHTML = '-1';
@@ -44,7 +44,8 @@ function fatorial() {
     imPar(numero)
     nPrimo(numero)
 }
-function imPar(num) {
+
+export function imPar(num) {
     if (eval(num) % 2 === 0) {
         par.style.color = "#000000"
         impar.style.color = "rgba(0, 0, 0, 0.3)"
@@ -53,7 +54,7 @@ function imPar(num) {
         par.style.color = "rgba(0, 0, 0, 0.3)"
     }
 }
-function nPrimo(numero) {
+export function nPrimo(numero) {
     let numeroINT = eval(numero)
     let pri = true;
   for(let i = 2; i < numeroINT; i++) {
